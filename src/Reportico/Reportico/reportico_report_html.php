@@ -145,7 +145,7 @@ class reportico_report_html extends reportico_report
 		if ( strstr($height_string, "%" ) )
 		{
 			$height = (int)
-				( $this->page_height * $height_string ) / 100;
+				( $this->page_height * (float)$height_string ) / 100;
 		}
 
 		return $height;
@@ -157,7 +157,7 @@ class reportico_report_html extends reportico_report
 		if ( strstr($width_string, "%" ) )
 		{
 			$width = (int)
-				( $this->page_width * $width_string ) / 100;
+				( $this->page_width * (float)$width_string ) / 100;
 		}
 
 		return $width;
